@@ -1,0 +1,51 @@
+"Id","SiteName","PollutionClass","PollutionType","RemediationStatus","RemediationStart","RemediationFinish","AddressLine","City","StateProvince","PostalCode","Country","Latitude","Longitude"
+1,"Copper Dale Site","Residential","Biological","In Progress","2024-09-01","2026-05-02","9534 Processing Ln","Columbia","SC","29201","USA",34.0007,-81.0348
+2,"Storm Pond Site","Industrial","Chemical","Planned","2026-01-25","2026-09-02","4290 Environmental St","Billings","MT","59101","USA",45.7833,-108.5007
+3,"Sky Brook Site","Industrial","Nuclear","Planned","2026-01-17","2026-03-27","4033 Manufacturing Dr","Orlando","FL","32801","USA",28.5383,-81.3792
+4,"Emerald Springs Site","Residential","Biological","In Progress","2024-04-05","2026-08-07","6916 Waste St","Virginia Beach","VA","23451","USA",36.8529,-75.978
+5,"Pine Point Site","Industrial","Biological","Planned","2026-01-13","2026-10-27","9042 Hazmat Rd","Warwick","RI","02801","USA",41.7001,-71.4162
+6,"Valley Cove Site","Federal","Biological","Completed","2025-02-16","2025-05-06","1361 Industrial Blvd","Burlington","VT","05401","USA",44.4759,-73.2121
+7,"Oak Pointe Site","Residential","Biological","Completed","2025-02-20","2025-10-18","2915 Plant Ave","Fargo","ND","58101","USA",46.8772,-96.7898
+8,"Cedar Dale Site","Residential","Nuclear","In Progress","2024-09-27","2026-11-02","2732 Production Way","Tucson","AZ","85701","USA",32.2217,-110.9265
+9,"Iron Point Site","Industrial","Chemical","Completed","2023-12-08","2024-05-04","7579 Industrial Blvd","Omaha","NE","68101","USA",41.2565,-95.9345
+10,"Summit Hollow Site","Federal","Nuclear","In Progress","2025-02-08","2026-02-18","9642 Hazmat Rd","Burlington","VT","05401","USA",44.4759,-73.2121
+11,"Diamond Vista Site","Industrial","Biological","Planned","2026-01-20","2026-05-06","1114 Cleanup Ln","Omaha","NE","68101","USA",41.2565,-95.9345
+12,"Earth Plaza Site","Federal","Nuclear","Planned","2026-04-13","2026-12-11","8007 Plant Ave","Orlando","FL","32801","USA",28.5383,-81.3792
+13,"Forest Pond Site","Residential","Biological","Evaluating","","","2643 Cleanup Ln","Beverly Hills","CA","90210","USA",34.0901,-118.4065
+14,"Ruby Mill Site","Residential","Nuclear","Planned","2026-03-23","2026-10-21","4744 Factory Rd","Omaha","NE","68101","USA",41.2565,-95.9345
+15,"Water Glen Site","Federal","Biological","Completed","2024-07-30","2025-07-02","5095 Cleanup Ln","Philadelphia","PA","19101","USA",39.9526,-75.1652
+16,"Storm Valley Site","Residential","Biological","In Progress","2025-01-26","2026-06-12","6691 Environmental St","Columbia","SC","29201","USA",34.0007,-81.0348
+17,"Sunset Crossing Site","Industrial","Chemical","Completed","2024-04-05","2024-11-23","9481 Cleanup Ln","Denver","CO","80201","USA",39.7392,-104.9903
+18,"Valley Pond Site","Residential","Chemical","Planned","2025-12-04","2026-09-29","3840 Processing Ln","Virginia Beach","VA","23451","USA",36.8529,-75.978
+19,"Fire Harbor Site","Residential","Nuclear","In Progress","2023-12-06","2026-09-11","6434 Industrial Blvd","Hartford","CT","06101","USA",41.7658,-72.6734
+20,"Diamond Bluff Site","Residential","Biological","Evaluating","","","9926 Facility Rd","Kansas City","MO","64101","USA",39.0997,-94.5786
+21,"Storm Meadow Site","Industrial","Chemical","Planned","2025-12-18","2026-06-01","6496 Manufacturing Dr","Cleveland","OH","44101","USA",41.4993,-81.6944
+22,"Oak Cove Site","Federal","Chemical","Evaluating","","","248 Factory Rd","New Orleans","LA","70112","USA",29.9511,-90.0715
+23,"Copper Meadow Site","Residential","Chemical","Completed","2024-07-12","2025-01-04","4807 Facility Rd","Des Moines","IA","50301","USA",41.5868,-93.625
+24,"Stone Glen Site","Federal","Chemical","Planned","2026-04-02","2027-03-09","8083 Processing Ln","Billings","MT","59101","USA",45.7833,-108.5007
+25,"Eagle Bluff Site","Residential","Biological","Planned","2026-02-04","2026-04-25","1006 Remediation Dr","Little Rock","AR","72201","USA",34.7465,-92.2896
+26,"Forest Heights Site","Federal","Nuclear","Planned","2026-03-21","2026-07-22","7327 Facility Rd","Columbia","SC","29201","USA",34.0007,-81.0348
+27,"Willow Bridge Site","Federal","Chemical","Evaluating","","","2887 Industrial Blvd","Minneapolis","MN","55401","USA",44.9778,-93.265
+28,"Stone Harbor Site","Industrial","Chemical","Evaluating","","","1809 Factory Rd","Sioux Falls","SD","57101","USA",43.5446,-96.7311
+29,"Earth Hollow Site","Industrial","Biological","Planned","2026-01-30","2026-08-15","4694 Factory Rd","Portland","ME","04101","USA",43.6591,-70.2568
+30,"Granite Creek Site","Federal","Nuclear","Planned","2026-04-04","2026-10-01","3663 Operations St","Orlando","FL","32801","USA",28.5383,-81.3792
+31,"Sky Crossing Site","Industrial","Nuclear","Completed","2025-05-01","2026-02-01","5242 Manufacturing Dr","Miami","FL","33101","USA",25.7617,-80.1918
+32,"Thunder Pond Site","Federal","Chemical","Planned","2026-01-24","2026-08-22","6663 Processing Ln","Cleveland","OH","44101","USA",41.4993,-81.6944
+33,"Copper Glen Site","Residential","Nuclear","Evaluating","","","6139 Operations St","Phoenix","AZ","85001","USA",33.4734,-112.074
+34,"Sunset Vista Site","Residential","Nuclear","Planned","2026-05-19","2027-03-26","5425 Chemical Ave","Sacramento","CA","95801","USA",38.5816,-121.4944
+35,"Iron Park Site","Industrial","Biological","In Progress","2024-07-19","2026-01-17","3915 Chemical Ave","Boston","MA","02101","USA",42.3601,-71.0589
+36,"Eagle Gardens Site","Residential","Chemical","Evaluating","","","625 Industrial Blvd","Hartford","CT","06101","USA",41.7658,-72.6734
+37,"Fire Junction Site","Residential","Chemical","In Progress","2025-07-17","2026-04-07","9365 Operations St","Omaha","NE","68101","USA",41.2565,-95.9345
+38,"Golden Hollow Site","Industrial","Biological","Planned","2026-04-19","2026-11-12","3901 Toxic Ave","Virginia Beach","VA","23451","USA",36.8529,-75.978
+39,"Mountain Rock Site","Residential","Biological","Planned","2026-03-20","2026-11-09","3782 Industrial Blvd","Anchorage","AK","99501","USA",61.2181,-149.9003
+40,"River Gardens Site","Federal","Nuclear","Evaluating","","","3623 Facility Rd","Sioux Falls","SD","57101","USA",43.5446,-96.7311
+41,"Thunder Hill Site","Industrial","Chemical","In Progress","2025-11-24","2026-05-03","8239 Environmental St","Miami","FL","33101","USA",25.7617,-80.1918
+42,"Earth Gardens Site","Federal","Chemical","Planned","2026-05-22","2026-11-12","5300 Factory Rd","Fargo","ND","58101","USA",46.8772,-96.7898
+43,"River Brook Site","Industrial","Nuclear","Evaluating","","","4496 Processing Ln","Fresno","CA","93701","USA",36.7378,-119.7871
+44,"Sky Rock Site","Industrial","Nuclear","In Progress","2024-02-19","2026-08-22","6443 Production Way","New York","NY","10001","USA",40.7505,-73.9934
+45,"Lake Springs Site","Federal","Nuclear","Planned","2026-03-04","2026-11-30","2595 Factory Rd","Colorado Springs","CO","80901","USA",38.8339,-104.8214
+46,"Iron Pointe Site","Residential","Chemical","Evaluating","","","253 Remediation Dr","Anchorage","AK","99501","USA",61.2181,-149.9003
+47,"Ruby Cove Site","Residential","Chemical","Planned","2025-12-09","2026-05-06","7039 Remediation Dr","Omaha","NE","68101","USA",41.2565,-95.9345
+48,"Pine Mill Site","Industrial","Biological","Completed","2025-02-17","2025-06-12","7946 Waste St","Kansas City","MO","64101","USA",39.0997,-94.5786
+49,"Thunder Gardens Site","Industrial","Nuclear","Completed","2024-03-04","2024-10-06","9811 Chemical Ave","Columbia","SC","29201","USA",34.0007,-81.0348
+50,"Earth Cove Site","Industrial","Nuclear","Completed","2024-04-27","2024-12-16","2611 Processing Ln","Raleigh","NC","27601","USA",35.7796,-78.6382

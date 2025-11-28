@@ -1,0 +1,51 @@
+"PolicyNumber","PolicyType","EffectiveDate","ExpirationDate","Status","EndorsementAmount","AddressLine","City","StateProvince","PostalCode","Country","Latitude","Longitude"
+"DF37762884","Auto Insurance","2025-02-11","2026-02-11","Policy Issued",134501.6,"2142 First St","Cheyenne","WY","82001","USA",41.14,-104.8197
+"UP69100231","Auto Insurance","2026-06-11","2027-06-11","Policy Issued",187870.35,"8485 Second Ave","Miami","FL","33101","USA",25.7617,-80.1918
+"LS87518995","Property Insurance","2024-11-06","2025-11-06","Policy Active",209268.62,"7474 Cedar Ave","Albany","NY","12201","USA",42.6526,-73.7562
+"WQ69867228","Health Insurance","2025-04-04","2026-04-04","Policy Issued",339942.7,"3683 Main St","Virginia Beach","VA","23451","USA",36.8529,-75.978
+"XL95442462","Auto Insurance","2024-07-25","2025-07-25","Policy Expired",497756.63,"4507 Oak Ave","Kansas City","MO","64101","USA",39.0997,-94.5786
+"BC73081379","Property Insurance","2026-09-11","2027-09-11","Policy Expired",158170.02,"3906 Maple Dr","Kansas City","MO","64101","USA",39.0997,-94.5786
+"UY03323478","Life Insurance","2024-04-18","2025-04-18","Policy Issued",125962.05,"1777 First St","Boise","ID","83702","USA",43.615,-116.2023
+"FF19549184","Life Insurance","2023-12-14","2024-12-13","Policy Cancelled",110382.9,"3228 Second Ave","Raleigh","NC","27601","USA",35.7796,-78.6382
+"XA85720311","Auto Insurance","2026-04-04","2027-04-04","Policy Issued",232186.41,"9142 Oak Ave","Tulsa","OK","74101","USA",36.154,-95.9928
+"AQ79355244","Life Insurance","2026-09-19","2027-09-19","Policy Active",28933.76,"5567 Cedar Ave","Tucson","AZ","85701","USA",32.2217,-110.9265
+"XY34217228","Health Insurance","2025-08-22","2026-08-22","Policy Issued",110321.71,"1865 Pine St","Raleigh","NC","27601","USA",35.7796,-78.6382
+"NH60826689","Property Insurance","2024-01-17","2025-01-16","Policy Active",70082.98,"7498 Elm St","Atlanta","GA","30301","USA",33.749,-84.388
+"QF78360193","Life Insurance","2025-09-24","2026-09-24","Policy Issued",447790.19,"2983 Second Ave","Seattle","WA","98101","USA",47.6062,-122.3321
+"FE23156702","Health Insurance","2025-12-01","2026-12-01","Policy Expired",254197.38,"2339 Maple Dr","Las Vegas","NV","89101","USA",36.1699,-115.1398
+"VJ60616396","Auto Insurance","2025-09-12","2026-09-12","Policy Expired",328021.12,"9973 Washington Ave","Mesa","AZ","85201","USA",33.4152,-111.8315
+"PK44050523","Life Insurance","2024-10-01","2025-10-01","Policy Cancelled",373721.72,"9119 First St","Burlington","VT","05401","USA",44.4759,-73.2121
+"QD74207959","Property Insurance","2026-06-22","2027-06-22","Policy Issued",357283.78,"1362 Cedar Ave","Milwaukee","WI","53201","USA",43.0389,-87.9065
+"SK25789915","Auto Insurance","2026-07-31","2027-07-31","Policy Cancelled",207643.53,"3079 Elm St","Beverly Hills","CA","90210","USA",34.0901,-118.4065
+"GK45765023","Life Insurance","2024-02-17","2025-02-16","Policy Expired",493366.8,"7035 Pine St","Chicago","IL","60601","USA",41.8827,-87.6233
+"OD40570914","Life Insurance","2026-02-08","2027-02-08","Policy Issued",381353.66,"7592 Second Ave","Kansas City","MO","64101","USA",39.0997,-94.5786
+"UI60506827","Property Insurance","2024-09-11","2025-09-11","Policy Issued",261993.4,"1401 Cedar Ave","Hartford","CT","06101","USA",41.7658,-72.6734
+"AY21539225","Auto Insurance","2024-10-12","2025-10-12","Policy Expired",30739.46,"8188 Maple Dr","Cleveland","OH","44101","USA",41.4993,-81.6944
+"NH79190019","Auto Insurance","2024-05-12","2025-05-12","Policy Cancelled",315029.52,"8022 First St","Burlington","VT","05401","USA",44.4759,-73.2121
+"WV48629153","Property Insurance","2025-04-08","2026-04-08","Policy Issued",20386.23,"430 Cedar Ave","Detroit","MI","48201","USA",42.3314,-83.0458
+"XT14950117","Auto Insurance","2024-11-15","2025-11-15","Policy Cancelled",431979.41,"8820 Main St","Raleigh","NC","27601","USA",35.7796,-78.6382
+"JG38506387","Auto Insurance","2026-05-27","2027-05-27","Policy Issued",284683.0,"954 Elm St","Sioux Falls","SD","57101","USA",43.5446,-96.7311
+"WV28501090","Life Insurance","2025-05-19","2026-05-19","Policy Issued",23302.6,"7872 Oak Ave","Colorado Springs","CO","80901","USA",38.8339,-104.8214
+"PP33358747","Life Insurance","2025-03-15","2026-03-15","Policy Issued",216357.17,"308 Maple Dr","Cheyenne","WY","82001","USA",41.14,-104.8197
+"EF79137167","Health Insurance","2026-09-22","2027-09-22","Policy Active",45024.02,"751 Washington Ave","Fargo","ND","58101","USA",46.8772,-96.7898
+"JU42607076","Life Insurance","2025-09-12","2026-09-12","Policy Issued",381564.56,"194 Oak Ave","Chicago","IL","60601","USA",41.8827,-87.6233
+"XN47925192","Life Insurance","2026-04-09","2027-04-09","Policy Cancelled",465706.74,"2809 Elm St","Boston","MA","02101","USA",42.3601,-71.0589
+"BW85194489","Property Insurance","2026-07-28","2027-07-28","Policy Expired",403916.9,"7670 Elm St","Tucson","AZ","85701","USA",32.2217,-110.9265
+"FT60988617","Property Insurance","2024-07-02","2025-07-02","Policy Cancelled",99172.24,"2679 Maple Dr","Little Rock","AR","72201","USA",34.7465,-92.2896
+"YP64368969","Property Insurance","2025-05-28","2026-05-28","Policy Expired",222815.72,"6103 Maple Dr","Sacramento","CA","95801","USA",38.5816,-121.4944
+"JU34914745","Auto Insurance","2024-05-28","2025-05-28","Policy Active",407483.95,"5960 First St","Anchorage","AK","99501","USA",61.2181,-149.9003
+"FG49832281","Auto Insurance","2026-10-13","2027-10-13","Policy Expired",264516.77,"5631 Main St","Fresno","CA","93701","USA",36.7378,-119.7871
+"ZO71292179","Health Insurance","2026-04-23","2027-04-23","Policy Active",284238.96,"6975 Pine St","Manchester","NH","03101","USA",42.9956,-71.4548
+"DT69891099","Property Insurance","2024-10-06","2025-10-06","Policy Expired",133591.27,"1755 Elm St","Las Vegas","NV","89101","USA",36.1699,-115.1398
+"FN39882934","Life Insurance","2026-08-30","2027-08-30","Policy Expired",302067.4,"7125 Pine St","Camden","NJ","08101","USA",39.9259,-75.1196
+"ZA54573266","Auto Insurance","2025-09-06","2026-09-06","Policy Issued",51699.88,"5568 Maple Dr","Tulsa","OK","74101","USA",36.154,-95.9928
+"EW50224499","Health Insurance","2026-10-01","2027-10-01","Policy Active",394834.74,"6119 Second Ave","Milwaukee","WI","53201","USA",43.0389,-87.9065
+"GM20432631","Auto Insurance","2026-03-19","2027-03-19","Policy Expired",257081.27,"699 Main St","Raleigh","NC","27601","USA",35.7796,-78.6382
+"QB51980301","Life Insurance","2026-06-01","2027-06-01","Policy Active",201449.51,"3814 Main St","Chicago","IL","60601","USA",41.8827,-87.6233
+"FO59108243","Property Insurance","2025-11-06","2026-11-06","Policy Expired",87934.05,"4634 First St","New Orleans","LA","70112","USA",29.9511,-90.0715
+"LJ39549283","Health Insurance","2025-08-15","2026-08-15","Policy Cancelled",32411.36,"9256 Oak Ave","Orlando","FL","32801","USA",28.5383,-81.3792
+"FR07875205","Life Insurance","2024-06-17","2025-06-17","Policy Issued",422916.61,"996 Maple Dr","Fresno","CA","93701","USA",36.7378,-119.7871
+"EQ22461225","Auto Insurance","2025-07-03","2026-07-03","Policy Expired",335877.03,"8406 Main St","Houston","TX","77001","USA",29.7589,-95.3677
+"TW95091103","Life Insurance","2025-10-06","2026-10-06","Policy Expired",243829.46,"9930 Pine St","Houston","TX","77001","USA",29.7589,-95.3677
+"QB82840130","Life Insurance","2024-07-30","2025-07-30","Policy Expired",401818.7,"9057 Oak Ave","Cheyenne","WY","82001","USA",41.14,-104.8197
+"GB39983734","Auto Insurance","2026-06-13","2027-06-13","Policy Issued",94286.68,"4977 Main St","Chicago","IL","60601","USA",41.8827,-87.6233
