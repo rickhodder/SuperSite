@@ -130,7 +130,6 @@ for i in range(1, 51):
     row = [i, site_name, pollution_class, pollution_type, status, start_date, finish_date, 
            generate_fake_address(), city, state, postal_code, "USA", lat, lng]
     data.append(row)
-print("got here")
 # Write CSV
 with open('superfundsites.csv', 'w', newline='') as f:
     writer = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)

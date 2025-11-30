@@ -7,6 +7,7 @@ from typing import List, Dict, Optional, Tuple
 from .BaseAgent import BaseAgent
 from .models.Location import Location
 from .models.SuperFundSite import SuperFundSite
+from .PolicyAgent import PolicyAgent
 
 class AddressScoringAgent(BaseAgent):
     def __init__(self):
@@ -14,7 +15,10 @@ class AddressScoringAgent(BaseAgent):
         self.csv_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'superfundsites.csv')
         self.superfund_sites = []
         self.load_superfund_sites()
-    
+
+        self.policyAgent=PolicyAgent()
+        self.policies = self.policyAgent.policies
+
     def load_superfund_sites(self):
         """Load superfund sites from CSV file and convert to SuperFundSite objects"""
         try:
@@ -30,8 +34,8 @@ class AddressScoringAgent(BaseAgent):
                         state_province=row['StateProvince'].strip('"'),
                         postal_code=row['PostalCode'].strip('"'),
                         country=row['Country'].strip('"'),
-                        latitude=0.0,  # Default value - could be geocoded later
-                        longitude=0.0  # Default value - could be geocoded later
+                        latitude=float(row['Latitude'].strip('"')),
+                        longitude=float(row['Longitude'].strip('"'))
                     )
                     
                     # Parse dates if they exist
@@ -55,6 +59,7 @@ class AddressScoringAgent(BaseAgent):
                     
                     # Create SuperFundSite object
                     superfund_site = SuperFundSite(
+                        site_name=row['SiteName'].strip('"'),
                         location=location,
                         pollution_class=row['PollutionClass'].strip('"'),
                         pollution_type=row['PollutionType'].strip('"'),
@@ -73,63 +78,86 @@ class AddressScoringAgent(BaseAgent):
         except Exception as e:
             print(f"Error loading superfund sites for address evaluation: {e}")
             self.superfund_sites = []
-    
+
+    def get_distinct_list_of_postal_codes_and_lat_long_tuple_from_sites_and_policies(self) -> Dict[str, Tuple[float, float]]:
+        """Get distinct dictionary of postal codes and their corresponding lat/long from sites and policies"""
+        distinct_locations = {}
+
+        # Extract from SuperFund sites
+        for site in self.superfund_sites:
+            distinct_locations[site.location.postal_code] = (
+                site.location.latitude,
+                site.location.longitude
+            )
+
+        # Extract from policies
+        for policy in self.policies:
+            distinct_locations[policy.location.postal_code] = (
+                policy.location.latitude,
+                policy.location.longitude
+            )
+
+        return distinct_locations
+
     def get_coordinates_from_postal_code(self, postal_code: str) -> Optional[Tuple[float, float]]:
         """
         Get approximate coordinates from postal code
         This is a simplified mapping for demo purposes
         In production, you would use a proper geocoding API
         """
+
+        postal_coords = self.get_distinct_list_of_postal_codes_and_lat_long_tuple_from_sites_and_policies()
+
         # Sample postal code to coordinates mapping for major US cities
-        postal_coords = {
-            # New York area
-            "10001": (40.7505, -73.9934), "10002": (40.7156, -73.9877), "10003": (40.7310, -73.9896),
-            "10004": (40.7047, -74.0142), "10005": (40.7056, -74.0088), "10006": (40.7089, -74.0132),
+        # postal_coords = {
+        #     # New York area
+        #     "10001": (40.7505, -73.9934), "10002": (40.7156, -73.9877), "10003": (40.7310, -73.9896),
+        #     "10004": (40.7047, -74.0142), "10005": (40.7056, -74.0088), "10006": (40.7089, -74.0132),
             
-            # California area
-            "90210": (34.0901, -118.4065), "90211": (34.0836, -118.4089), "90212": (34.1030, -118.4104),
-            "90301": (34.0194, -118.3957), "92101": (32.7157, -117.1611), "94102": (37.7849, -122.4094),
+        #     # California area
+        #     "90210": (34.0901, -118.4065), "90211": (34.0836, -118.4089), "90212": (34.1030, -118.4104),
+        #     "90301": (34.0194, -118.3957), "92101": (32.7157, -117.1611), "94102": (37.7849, -122.4094),
             
-            # Illinois area
-            "60601": (41.8827, -87.6233), "60602": (41.8819, -87.6278), "60603": (41.8781, -87.6298),
-            "60604": (41.8781, -87.6298), "60605": (41.8683, -87.6201), "60606": (41.8847, -87.6441),
+        #     # Illinois area
+        #     "60601": (41.8827, -87.6233), "60602": (41.8819, -87.6278), "60603": (41.8781, -87.6298),
+        #     "60604": (41.8781, -87.6298), "60605": (41.8683, -87.6201), "60606": (41.8847, -87.6441),
             
-            # Texas area
-            "77001": (29.7589, -95.3677), "77002": (29.7633, -95.3633), "77003": (29.7441, -95.3370),
-            "77004": (29.7411, -95.3844), "77005": (29.7199, -95.4009), "77006": (29.7604, -95.3697),
+        #     # Texas area
+        #     "77001": (29.7589, -95.3677), "77002": (29.7633, -95.3633), "77003": (29.7441, -95.3370),
+        #     "77004": (29.7411, -95.3844), "77005": (29.7199, -95.4009), "77006": (29.7604, -95.3697),
             
-            # Arizona area
-            "85001": (33.4734, -112.0740), "85002": (33.4734, -112.0740), "85003": (33.4484, -112.0740),
-            "85004": (33.4734, -112.0585), "85005": (33.4256, -112.1168), "85006": (33.4734, -112.0323),
+        #     # Arizona area
+        #     "85001": (33.4734, -112.0740), "85002": (33.4734, -112.0740), "85003": (33.4484, -112.0740),
+        #     "85004": (33.4734, -112.0585), "85005": (33.4256, -112.1168), "85006": (33.4734, -112.0323),
             
-            # Pennsylvania area
-            "19101": (39.9526, -75.1652), "19102": (39.9526, -75.1652), "19103": (39.9526, -75.1652),
+        #     # Pennsylvania area
+        #     "19101": (39.9526, -75.1652), "19102": (39.9526, -75.1652), "19103": (39.9526, -75.1652),
             
-            # Florida area
-            "33101": (25.7617, -80.1918), "33102": (25.7617, -80.1918), "33103": (25.7617, -80.1918),
+        #     # Florida area
+        #     "33101": (25.7617, -80.1918), "33102": (25.7617, -80.1918), "33103": (25.7617, -80.1918),
             
-            # Additional major cities
-            "30301": (33.7490, -84.3880), # Atlanta, GA
-            "98101": (47.6062, -122.3321), # Seattle, WA
-            "80201": (39.7392, -104.9903), # Denver, CO
-            "48201": (42.3314, -83.0458), # Detroit, MI
-            "21201": (39.2904, -76.6122), # Baltimore, MD
-            "53201": (43.0389, -87.9065), # Milwaukee, WI
-            "87101": (35.0844, -106.6504), # Albuquerque, NM
-            "85701": (32.2217, -110.9265), # Tucson, AZ
-            "93701": (36.7378, -119.7871), # Fresno, CA
-            "95801": (38.5816, -121.4944), # Sacramento, CA
-            "64101": (39.0997, -94.5786), # Kansas City, MO
-            "85201": (33.4152, -111.8315), # Mesa, AZ
-            "23451": (36.8529, -75.9780), # Virginia Beach, VA
-            "80901": (38.8339, -104.8214), # Colorado Springs, CO
-            "68101": (41.2565, -95.9345), # Omaha, NE
-            "27601": (35.7796, -78.6382), # Raleigh, NC
-            "55401": (44.9778, -93.2650), # Minneapolis, MN
-            "74101": (36.1540, -95.9928), # Tulsa, OK
-            "44101": (41.4993, -81.6944), # Cleveland, OH
-            "67201": (37.6872, -97.3301), # Wichita, KS
-        }
+        #     # Additional major cities
+        #     "30301": (33.7490, -84.3880), # Atlanta, GA
+        #     "98101": (47.6062, -122.3321), # Seattle, WA
+        #     "80201": (39.7392, -104.9903), # Denver, CO
+        #     "48201": (42.3314, -83.0458), # Detroit, MI
+        #     "21201": (39.2904, -76.6122), # Baltimore, MD
+        #     "53201": (43.0389, -87.9065), # Milwaukee, WI
+        #     "87101": (35.0844, -106.6504), # Albuquerque, NM
+        #     "85701": (32.2217, -110.9265), # Tucson, AZ
+        #     "93701": (36.7378, -119.7871), # Fresno, CA
+        #     "95801": (38.5816, -121.4944), # Sacramento, CA
+        #     "64101": (39.0997, -94.5786), # Kansas City, MO
+        #     "85201": (33.4152, -111.8315), # Mesa, AZ
+        #     "23451": (36.8529, -75.9780), # Virginia Beach, VA
+        #     "80901": (38.8339, -104.8214), # Colorado Springs, CO
+        #     "68101": (41.2565, -95.9345), # Omaha, NE
+        #     "27601": (35.7796, -78.6382), # Raleigh, NC
+        #     "55401": (44.9778, -93.2650), # Minneapolis, MN
+        #     "74101": (36.1540, -95.9928), # Tulsa, OK
+        #     "44101": (41.4993, -81.6944), # Cleveland, OH
+        #     "67201": (37.6872, -97.3301), # Wichita, KS
+        # }
         
         return postal_coords.get(postal_code)
     
@@ -185,28 +213,36 @@ class AddressScoringAgent(BaseAgent):
             }
         
         # Get coordinates for input address
-        input_coords = self.get_coordinates_from_postal_code(postal_code)
+        # input_coords = self.get_coordinates_from_postal_code(postal_code)
         
-        if not input_coords:
-            return {
-                "score": 0.0,
-                "nearby_sites": [],
-                "error": f"Unknown postal code: {postal_code}. Please use a supported postal code.",
-                "address": address
-            }
+        # if not input_coords:
+        #     return {
+        #         "score": 0.0,
+        #         "nearby_sites": [],
+        #         "error": f"Unknown postal code: {postal_code}. Please use a supported postal code.",
+        #         "address": address
+        #     }
         
+        # create a tuple from the latitude and longitude of the address object
+        location=self.convert_string_to_location(address)
+        print(f"latitude: {location.latitude}, longitude: {location.longitude}")
+
+        input_coords = (location.latitude, location.longitude)
         nearby_sites = []
         
         # Check each superfund site for proximity
         for site in self.superfund_sites:
-            site_coords = self.get_site_coordinates(site)
-            
+            #site_coords = self.get_site_coordinates(site)
+            # create a tuple from the latitude and longitude of the site object
+            site_coords = (site.location.latitude, site.location.longitude)
             if site_coords:
+                
                 distance = self.calculate_distance(input_coords, site_coords)
                 
                 if distance <= 50:  # Within 50 miles
                     # Create a new SuperFundSite object with calculated distance
                     nearby_site = SuperFundSite(
+                        site_name=site.site_name,
                         location=site.location,
                         pollution_class=site.pollution_class,
                         pollution_type=site.pollution_type,
@@ -266,6 +302,32 @@ class AddressScoringAgent(BaseAgent):
         else:
             return "I can evaluate address safety based on nearby superfund sites. Try 'evaluate [address]' or 'help' for more commands."
     
+    def convert_string_to_location(self, address: str) -> Location:
+        """Convert an address string to a Location object"""
+        postal_code = self.extract_postal_code(address)
+        if not postal_code:
+            raise ValueError("Could not extract postal code from address.")
+        
+        coords = self.get_coordinates_from_postal_code(postal_code)
+        if not coords:
+            raise ValueError(f"Unknown postal code: {postal_code}.")
+        
+        # For simplicity, split address into parts (this is a naive approach)
+        address_parts = address.split(',')
+        street_address = address_parts[0].strip() if len(address_parts) > 0 else ""
+        city = address_parts[1].strip() if len(address_parts) > 1 else ""
+        state_province = address_parts[2].strip().split()[0] if len(address_parts) > 2 else ""
+        
+        return Location(
+            address=street_address,
+            city=city,
+            state_province=state_province,
+            postal_code=postal_code,
+            country="USA",
+            latitude=coords[0],
+            longitude=coords[1]
+        )
+
     def process_task(self, task):
         """Process a specific address safety evaluation task"""
         return self.process_input(task)

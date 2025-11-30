@@ -7,7 +7,6 @@ from .models.Location import Location
 
 class PolicyAgent(BaseAgent):
     def __init__(self):
-        print("got here")
         super().__init__("Policy Agent")
         self.csv_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'policy.csv')
         self.policies = []

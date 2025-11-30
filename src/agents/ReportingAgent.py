@@ -79,6 +79,7 @@ I can create detailed reports showing:
 
             # Create sample superfund site
             sample_site = SuperFundSite(
+                site_name="Sample Superfund Site",
                 location=test_location,
                 pollution_class="Residential",
                 pollution_type="Nuclear",

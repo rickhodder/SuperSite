@@ -6,7 +6,7 @@ import os
 # Add src to path for imports
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
-from agents.reporting_agent import ReportingAgent
+from agents.ReportingAgent import ReportingAgent
 from agents.models.Location import Location
 from agents.models.LocationScoringRequest import LocationScoringRequest
 from agents.models.LocationScoringResult import LocationScoringResult

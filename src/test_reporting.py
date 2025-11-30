@@ -51,7 +51,7 @@ def test_reporting_agent():
     # Create some sample superfund sites
     site1 = SuperFundSite(
         #epa_id="CAD000123456",
-        #site_name="Old Chemical Plant",
+        site_name="Old Chemical Plant",
         location=test_site1_location,
         #address="456 Industrial Blvd",
         #city="Anytown",
@@ -73,7 +73,7 @@ def test_reporting_agent():
     
     site2 = SuperFundSite(
         #epa_id="CAD000789012",
-        #site_name="Former Gas Station",
+        site_name="Former Gas Station", 
         location=test_site2_location,        
         #address="789 Highway 101",
         #city="Nearby City",
@@ -98,7 +98,6 @@ def test_reporting_agent():
         request=scoring_request,
         nearby_superfund_sites=[site1, site2]
     )
-    print("got here")
     # Create and test the reporting agent
     reporting_agent = ReportingAgent()
     
